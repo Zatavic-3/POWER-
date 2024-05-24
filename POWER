@@ -1,0 +1,15 @@
+AttendancePercentage = 
+DIVIDE(
+    COUNTROWS(FILTER(Attendance, Attendance[Status] = "Present")),
+    COUNTROWS(Attendance)
+)
+SickLeavePercentage = 
+DIVIDE(
+    COUNTROWS(FILTER(Attendance, Attendance[Status] = "Sick Leave")),
+    COUNTROWS(Attendance)
+)
+WFHPercentage = 
+DIVIDE(
+    COUNTROWS(FILTER(Attendance, Attendance[WorkLocation] = "WFH")),
+    COUNTROWS(Attendance)
+)
